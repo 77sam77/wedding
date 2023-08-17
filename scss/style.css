@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100000000000000010000000000000;
+  background-color: #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0;
+  align-items: center;
+  position: relative;
+}
+.nav .bratt {
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  color: orangered;
+}
+.nav ul {
+  display: flex;
+  gap: 40px;
+}
+.nav a {
+  color: black;
+  transition: 0.3s;
+}
+.nav a:hover {
+  color: rgb(212, 58, 2);
+}
+.nav span {
+  color: rgb(212, 58, 2);
+}
+.nav .menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  font-size: 40px;
+  display: none;
+}
+.nav .menuTwo {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  transition: 0.5s;
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+}
+.nav .left li {
+  margin-top: 20px;
+}
+.nav .left a {
+  color: black;
+}
+.nav .menu input {
+  display: none;
+}
+.nav [id=open]:checked ~ ul {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+@media (max-width: 480px) {
+  .nav .navul {
+    display: none;
+  }
+  .nav .bratt {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+  }
+  .nav .menu {
+    display: inline-block;
+  }
+  .nav .left {
+    flex-direction: column;
+  }
+  .nav .left li {
+    margin-top: 0;
+  }
+}
+
+body {
+  background-color: #fff;
+}
+
+.sec {
+  max-width: 1170px;
+  border-radius: 20px;
+  background-image: url(../img/couple.png);
+  background-position: 10% 2%;
+  height: 500px;
+  position: relative;
+  background-color: #cacaca;
+  background-size: cover;
+  padding: 40px;
+}
+.sec h1 {
+  font-size: 25px;
+  color: #cb7575;
+  font-family: "Amatic SC", cursive;
+  margin-top: 50px;
+}
+.sec h2 {
+  font-size: 35px;
+  color: #fff;
+  font-family: "Amatic SC", cursive;
+  margin: 20px 0;
+  margin-bottom: 30px;
+}
+.sec i {
+  display: flex;
+  font-size: 20px;
+  margin-top: 20px;
+  color: darkgreen;
+}
+.sec i > p {
+  color: #fff;
+}
+.sec .i {
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+.sec a {
+  padding: 20px;
+  font-family: "Amatic SC", cursive;
+  background-color: #cb7575;
+  color: #fff;
+  border-radius: 10px;
+}
+.sec .info {
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+  right: 10%;
+  top: 65%;
+}
+.sec .info p {
+  font-family: "Amatic SC", cursive;
+  padding: 20px;
+  text-align: center;
+  background-color: orangered;
+  color: white;
+}
+.sec .info > p:last-child {
+  background-color: #fff;
+  color: black;
+  font-family: serif;
+}
+@media (max-width: 480px) {
+  .sec {
+    margin: 0 12px;
+    padding: 20px;
+    height: 650px;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .sec h1 {
+    font-size: 16px;
+  }
+  .sec h2 {
+    font-size: 22px;
+  }
+  .sec i {
+    font-size: 22px;
+    font-style: normal;
+  }
+  .sec .i {
+    margin-top: 40px;
+  }
+  .sec a {
+    font-size: 12px;
+    padding: 15px;
+  }
+  .sec .info {
+    left: 8%;
+    right: 50%;
+    top: 75%;
+    font-size: 13px;
+  }
+  .sec .info p {
+    text-align: left;
+  }
+  .sec .info > p:last-child {
+    font-size: 18px;
+  }
+}
+
+.section2 {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+  margin-top: 120px;
+}
+.section2 h2 {
+  font-family: "Amatic SC", cursive;
+  color: rgb(236, 201, 2);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.section2 i {
+  color: red;
+  font-size: 40px;
+}
+.section2 span {
+  display: inline-block;
+  margin-bottom: 12px;
+  width: 30px;
+  border: 1px solid rgb(236, 236, 236);
+}
+
+.sec2 {
+  display: flex;
+}
+.sec2 .leftgirl,
+.sec2 .rightboy {
+  display: flex;
+}
+.sec2 .leftgirl .img,
+.sec2 .rightboy .img {
+  overflow: hidden;
+  border-radius: 20px;
+  height: 360px;
+}
+.sec2 .leftgirl img,
+.sec2 .rightboy img {
+  transition: 0.5s;
+}
+.sec2 .leftgirl img:hover,
+.sec2 .rightboy img:hover {
+  transform: scale(105%);
+}
+.sec2 .leftinfo,
+.sec2 .rightinfo {
+  margin-left: 40px;
+}
+.sec2 .leftinfo span,
+.sec2 .rightinfo span {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 100;
+}
+.sec2 .leftinfo h3,
+.sec2 .rightinfo h3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 16px;
+  margin-top: 40px;
+  font-weight: 200;
+}
+.sec2 .leftinfo p,
+.sec2 .rightinfo p {
+  font-size: 24px;
+  width: 85%;
+  color: gray;
+  padding: 30px 0;
+}
+.sec2 .leftinfo i,
+.sec2 .rightinfo i {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: gold;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+.sec2 .leftinfo i:hover,
+.sec2 .rightinfo i:hover {
+  color: white;
+}
+@media (max-width: 480px) {
+  .sec2 {
+    flex-direction: column;
+  }
+  .sec2 .leftgirl,
+.sec2 .rightboy {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  .sec2 .leftgirl .img,
+.sec2 .rightboy .img {
+    overflow: visible;
+    padding: 0 15px;
+  }
+  .sec2 .leftgirl .img img,
+.sec2 .rightboy .img img {
+    border-radius: 20px;
+  }
+  .sec2 .leftinfo,
+.sec2 .rightinfo {
+    margin-top: 300px;
+  }
+}
+
+.wedding {
+  display: flex;
+  gap: 20px;
+}
+.wedding iframe {
+  height: 235px;
+  border-radius: 20px;
+}
+.wedding .rec img,
+.wedding .wed img,
+.wedding .map img {
+  transition: 0.3s;
+}
+.wedding .rec img:hover,
+.wedding .wed img:hover,
+.wedding .map img:hover {
+  transform: scale(105%);
+}
+.wedding .rec .hov,
+.wedding .wed .hov,
+.wedding .map .hov {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.wedding .rec i,
+.wedding .wed i,
+.wedding .map i {
+  display: flex;
+  gap: 5px;
+  font-size: 20px;
+  font-style: normal;
+  color: rgb(95, 95, 95);
+}
+.wedding .rec i:last-child,
+.wedding .wed i:last-child,
+.wedding .map i:last-child {
+  margin-top: 15px;
+}
+.wedding .rec h2,
+.wedding .wed h2,
+.wedding .map h2 {
+  font-family: "Amatic SC", cursive;
+  margin: 30px 0;
+  font-size: 20px;
+}
+@media (max-width: 480px) {
+  .wedding {
+    flex-direction: column;
+  }
+  .wedding .rec,
+.wedding .wed,
+.wedding .map {
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+  .wedding .rec .img,
+.wedding .wed .img,
+.wedding .map .img {
+    overflow: visible;
+  }
+  .wedding .rec .img img,
+.wedding .wed .img img,
+.wedding .map .img img {
+    border-radius: 20px;
+  }
+}
+
+.sec4 {
+  display: flex;
+  justify-content: space-between;
+}
+.sec4 .link {
+  padding: 20px;
+  font-size: 35px;
+}
+.sec4 .link p {
+  color: black;
+}
+.sec4 .link .groom {
+  margin-bottom: 30px;
+  border-bottom: 2px solid gray;
+  padding-bottom: 30px;
+  color: orangered;
+}
+.sec4 .two {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  gap: 30px;
+}
+.sec4 .two img {
+  width: 350px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.sec4 .two img:hover {
+  transform: scale(105%);
+}
+.sec4 .kevin,
+.sec4 .wilson {
+  display: flex;
+  gap: 30px;
+}
+.sec4 .kevin-info,
+.sec4 .wilson-info {
+  margin-left: 50px;
+}
+.sec4 .kevin-info span,
+.sec4 .wilson-info span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+}
+.sec4 .kevin-info h2,
+.sec4 .wilson-info h2 {
+  font-size: 18px;
+  font-family: "Amatic SC", cursive;
+  margin: 20px 0;
+}
+.sec4 .kevin-info p,
+.sec4 .wilson-info p {
+  font-size: 20px;
+  width: 70%;
+}
+.sec4 .kevin-img,
+.sec4 .wilson-img {
+  border-radius: 20px;
+}
+@media (max-width: 480px) {
+  .sec4 {
+    flex-direction: column;
+  }
+  .sec4 .kevin,
+.sec4 .wilson {
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+  .sec4 .kevin-info,
+.sec4 .wilson-info {
+    width: 100%;
+  }
+  .sec4 .kevin img,
+.sec4 .wilson img {
+    width: 160%;
+  }
+}
+
+.sec5 {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.sec5 div {
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.sec5 .img3,
+.sec5 .img5,
+.sec5 .img8 {
+  transition: 0.3s;
+}
+.sec5 .img3:hover,
+.sec5 .img5:hover,
+.sec5 .img8:hover {
+  transform: scale(105%);
+}
+.sec5 .div {
+  margin-top: 20px;
+}
+.sec5 .img1 {
+  transition: 0.3s;
+  border-radius: 20px;
+}
+.sec5 .img1:hover {
+  transform: scale(105%);
+}
+@media (max-width: 480px) {
+  .sec5 {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
